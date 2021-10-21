@@ -1,0 +1,26 @@
+To run the robot framework scripts you need:
+python 3 - https://www.python.org/downloads/
+install pip - https://pip.pypa.io/en/stable/installation/
+And you will need pip to install these two packages
+pip install robotframework
+pip install --upgrade robotframework-seleniumlibrary
+
+To run the test cases
+
+Open a terminal/command prompt, cd to the folder desktop_test containing the saucedemo_auto.robot file
+Example: cd C:\Users\1072738124\PycharmProjects\WizeAutomation\desktop_tests
+Comands to run the test cases:
+1.-	robot --test Valid_User_login -v browser:firefox -v username:standard_user -v password:secret_sauce .\saucedemo_auto.robot
+
+2.-	robot --test Invalid_User_login -v browser:firefox -v username:not_user -v password:secret .\saucedemo_auto.robot
+
+3.-	robot --test User_Logout -v browser:firefox -v username:standard_user -v password:secret_sauce .\saucedemo_auto.robot
+
+4.-	robot --test Sort_Products_Low_To_High -v browser:firefox -v username:standard_user -v password:secret_sauce .\saucedemo_auto.robot
+
+5.-	robot --test Add_Multiple_Items -v browser:firefox -v username:standard_user -v password:secret_sauce .\saucedemo_auto.robot
+
+6.-	robot --test Add_Onesie_To_Cart -v browser:firefox -v username:standard_user -v password:secret_sauce .\saucedemo_auto.robot
+
+7.-	robot --test Complete_Purchase -v browser:firefox -v username:standard_user -v password:secret_sauce -v fName:Robert -v lName:secret -v zipcode:51247 .\saucedemo_auto.robot
+

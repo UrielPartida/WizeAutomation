@@ -2,7 +2,9 @@
 *.log
 *.idea
 *.results
+.gitattributes
+.gitignore
 log.html
 output.xml
 report.html
-./desktop_tests/results
+../desktop_tests/results

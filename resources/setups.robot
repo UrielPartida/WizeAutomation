@@ -13,19 +13,27 @@ Basic Selenium Test Setup
     Verify Login Page Loaded
 
 Login Setup
+    [Arguments]    ${username}  ${password}
     [Documentation]    User must be logged in
+    ...
+    ...     Argument(s):
+    ...     - _username_ - Valid Username
+    ...     - _password_ - Valid Password
     Basic Selenium Test Setup
     Verify Login Page Loaded
-    ${username}=    Set Variable    standard_user
-    ${password}=    Set Variable    secret_sauce
     Log In Through Login Form In Login Page     ${username}     ${password}
     Verify Inventory Page Loaded
     ${isDisplayed}=     Inventory Container Is Displayed
     Should Be True  ${isDisplayed}   The Inventory Container should be displayed
 
 Purchase Setup
+    [Arguments]    ${username}  ${password}
     [Documentation]    User must be logged in
-    Login Setup
+    ...
+    ...     Argument(s):
+    ...     - _username_ - Valid Username
+    ...     - _password_ - Valid Password
+    Login Setup     ${username}  ${password}
     Add Multiple Items To Cart
     Click Cart Button
     Verify Cart Page Loaded
