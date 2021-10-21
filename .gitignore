@@ -1,0 +1,8 @@
+*.pyc
+*.log
+*.idea
+*.results
+log.html
+output.xml
+report.html
+./desktop_tests/results
