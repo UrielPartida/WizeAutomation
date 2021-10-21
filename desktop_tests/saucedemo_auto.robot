@@ -13,7 +13,7 @@ Valid_User_login
     Should Be True  ${isDisplayed}   The Inventory Container should be displayed
 
 Invalid_User_login
-    [Documentation]    Test to login a user with a valid id
+    [Documentation]    Test to login a user with an invalid id and validate the error message displayed
     [Setup]     Basic Selenium Test Setup
     Verify Login Page Loaded
     Log In Through Login Form In Login Page     ${username}     ${password}

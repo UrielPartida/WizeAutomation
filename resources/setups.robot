@@ -14,7 +14,7 @@ Basic Selenium Test Setup
 
 Login Setup
     [Arguments]    ${username}  ${password}
-    [Documentation]    User must be logged in
+    [Documentation]    Setup to login the user
     ...
     ...     Argument(s):
     ...     - _username_ - Valid Username
@@ -28,7 +28,7 @@ Login Setup
 
 Purchase Setup
     [Arguments]    ${username}  ${password}
-    [Documentation]    User must be logged in
+    [Documentation]    Setup to login and add the items to the cart
     ...
     ...     Argument(s):
     ...     - _username_ - Valid Username

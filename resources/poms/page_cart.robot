@@ -34,6 +34,6 @@ Verify All Items Appeared On Cart Page
     Verify Onesie Appeared On Cart Page
 
 Click Checkout Button
-    [Documentation]    Keyword to click the checkout button and go to checkout setp one.
+    [Documentation]    Keyword to click the checkout button and go to checkout step one.
     wait until element is visible   ${loc_button_checkout_pCart}   ${WAIT}   The checkout button isn't visible
     click element   ${loc_button_checkout_pCart}

@@ -7,12 +7,12 @@ ${loc_button_lowHigh_cSecondaryHeader}   css=[value=lohi]
 ${loc_text_sortContainerText_cSecondaryHeader}   css=.active_option
 *** Keywords ***
 Click Sortby Button
-    [Documentation]    Keyword to click the burger button and open the menu.
-    wait until element is visible   ${loc_button_sortBy_cSecondaryHeader}    ${WAIT}   The product sort container isn't visible
+    [Documentation]    Keyword to click the sortby button and open the sort menu.
+    wait until element is visible   ${loc_button_sortBy_cSecondaryHeader}    ${WAIT}   The product sort button isn't visible
     click element   ${loc_button_sortBy_cSecondaryHeader}
 
 Click Low To High Button
-    [Documentation]    Keyword to click the burger button and open the menu.
+    [Documentation]    Keyword to select the option low to high in the sort menu.
     wait until element is visible   ${loc_button_lowHigh_cSecondaryHeader}    ${WAIT}   The order low to high button isn't visible
     click element   ${loc_button_lowHigh_cSecondaryHeader}
 
