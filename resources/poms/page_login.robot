@@ -45,7 +45,7 @@ Log In Through Login Form In Login Page
     Input Password In Login Page  ${password}
     Click Login In Login Page
 
-Verify Error Message Appeared
-    [Documentation]    Keyword to Verify Created Article Submitted.
+Verify Error Message Appeared In Login Page
+    [Documentation]    Keyword to Verify Error Message Appeared on the login page
     ${message}=     Set Variable    Epic sadface: Username and password do not match any user in this service
     Element Should Contain   ${loc_text_error_pLogin}     ${message}    the text wasn't the same in the message variable and in the page

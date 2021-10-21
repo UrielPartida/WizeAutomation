@@ -13,7 +13,6 @@ Valid_User_login
     Verify Inventory Page Loaded
     ${isDisplayed}=     Inventory Container Is Displayed
     Should Be True  ${isDisplayed}   The Inventory Container should be displayed
-    Sleep   10s
 
 Invalid_User_login
     [Documentation]    Test to login a user with a valid id
@@ -22,15 +21,13 @@ Invalid_User_login
     ${username}=    Set Variable    zxcvas
     ${password}=    Set Variable    fasdqw
     Log In Through Login Form In Login Page     ${username}     ${password}
-    Verify Error Message Appeared
-    Sleep   10s
+    Verify Error Message Appeared In Login Page
 
 User_Logout
     [Documentation]    Test to logout from the page and validate you go to the login page
     [Setup]     Login Setup
     Open Burger Menu
     Click Logout Button
-    Sleep   10s
 
 Sort_Products_Low_To_High
     [Documentation]    Test to sort the products from low to high and validate the products were sorted
@@ -38,9 +35,31 @@ Sort_Products_Low_To_High
     Click Sortby Button
     Click Low To High Button
     Verify Sort By Low To High Selected
-    Sleep   10s
 
 Add_Multiple_Items
-    [Documentation]    Test to logout from the page and validate you go to the login page
+    [Documentation]    Test to add multiple items to the cart
     [Setup]     Login Setup
-    Click Sortby Button
+    Add Multiple Items To Cart
+    Click Cart Button
+    Verify Cart Page Loaded
+    Verify All Items Appeared On Cart Page
+
+Add_Onesie_To_Cart
+    [Documentation]    Test to add the specific product "Sauce Labs Onesie" to the shopping cart
+    [Setup]     Login Setup
+    Add Onesie To Cart
+    Click Cart Button
+    Verify Cart Page Loaded
+    Verify Onesie Appeared On Cart Page
+
+Complete_Purchase
+    [Documentation]    Test to do a purchase and navigates to the order confirmation page.
+    [Setup]     Purchase Setup
+    ${fName}=    Set Variable    olivas
+    ${lName}=    Set Variable    fernando
+    ${zipcode}=    Set Variable    96578
+    Verify Step One Page Loaded
+    Submit Step One     ${fName}    ${lName}    ${zipcode}
+    Verify Step Two Page Loaded
+    Click Finish In Step Two Page
+    Verify Checkout Complete Page Loaded

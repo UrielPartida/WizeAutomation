@@ -22,3 +22,12 @@ Login Setup
     Verify Inventory Page Loaded
     ${isDisplayed}=     Inventory Container Is Displayed
     Should Be True  ${isDisplayed}   The Inventory Container should be displayed
+
+Purchase Setup
+    [Documentation]    User must be logged in
+    Login Setup
+    Add Multiple Items To Cart
+    Click Cart Button
+    Verify Cart Page Loaded
+    Verify All Items Appeared On Cart Page
+    Click Checkout Button

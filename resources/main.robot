@@ -1,18 +1,15 @@
 *** Settings ***
 Library     String
 Resource    setups.robot
-Resource    goto.robot
-Resource    navigation.robot
 Resource    poms/basePage.robot
-Resource    poms/page_forums.robot
-Resource    poms/page_articles.robot
-Resource    poms/page_newArticle.robot
-Resource    poms/page_createdArticle.robot
 Resource    poms/page_login.robot
 Resource    poms/page_inventory.robot
-Resource    components/component_userMenuLogIn.robot
-Resource    components/component_channelTabBar.robot
-Resource    components/component_burgerMenu.robot
+Resource    poms/page_cart.robot
+Resource    poms/page_stepOne.robot
+Resource    poms/page_stepTwo.robot
+Resource    poms/page_checkoutComplete.robot
+Resource    components/component_mainHeader.robot
+Resource    components/component_secondaryHeader.robot
 *** Keywords ***
 Basic Selenium Test Teardown
     [Documentation]    - Logs last location
