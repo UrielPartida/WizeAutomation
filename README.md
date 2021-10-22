@@ -25,7 +25,7 @@ pip install robotframework
 ```shell
 pip install --upgrade robotframework-seleniumlibrary
 ```
-After downloading chromedriver and gecko driver you'll need to add them to your path, you can follow this ([link](https://www.browserstack.com/guide/run-selenium-tests-using-selenium-chromedriver)) tutorial to do it
+After downloading chromedriver and gecko driver you'll need to add them to your path, you can follow this [tutorial](https://www.browserstack.com/guide/run-selenium-tests-using-selenium-chromedriver) to do it
 
 
 3. Ready to run the tests
